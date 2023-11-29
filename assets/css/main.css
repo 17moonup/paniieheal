@@ -1,0 +1,227 @@
+/*
+@decription: Cascading Style Sheet
+@author:Sy
+@updatetime:2023-11-02 15:19:54
+*/
+/*https://google.github.io/styleguide/htmlcssguide.html
+  https://cloud.tencent.com/developer/article/1835320
+  https://blog.csdn.net/weixin_43883485/article/details/103504171
+  https://alienzhou.github.io/fe-performance-journey/5-subresources/css.html#_4-%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%A0%91%E6%9E%84%E5%BB%BA
+BOXBOXBOXBOX
+ */
+/*
+ 单位	名称	等价换算
+cm	厘米	1cm = 37.8px = 25.2/64in
+mm	毫米	1mm = 1/10th of 1cm
+Q	四分之一毫米	1Q = 1/40th of 1cm
+in	英寸	1in = 2.54cm = 96px
+pc	派卡	1pc = 1/6th of 1in
+pt	点	1pt = 1/72th of 1in
+px	像素	1px = 1/96th of 1in
+*/
+/*
+ 单位	相对于
+em	在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width。
+ex	字符“x”的高度。
+ch	数字“0”的宽度。
+rem	根元素的字体大小。
+lh	元素的行高。
+rlh	根元素的行高。当用于根元素的 font-size 或 line-height 属性时，它指的是这些属性的初始值。
+vw	视口宽度的 1%。
+vh	视口高度的 1%。
+vmin	视口较小尺寸的 1%。
+vmax	视口大尺寸的 1%。
+vb	在根元素的块向上，初始包含块的尺寸的 1%。
+vi	在根元素的行向上，初始包含块的尺寸的 1%。
+svw、svh	分别为视口较小尺寸的宽度和高度的 1%。
+lvw、lvh	分别为视口大尺寸的宽度和高度的 1%。
+dvw、dvh	分别为动态视口的宽度和高度的 1%。
+font-family: 'Noto Serif TC', serif;
+font-family: 'Rosarivo', cursive;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/
+/* Winter style finished at 2023/11/27 */
+html {	
+/*ORDER
+- 影响文档流的属性 (display/visibility/float/clear/position)
+- 盒模型的属性 (width/height/margin/padding/border/outline)
+- 排版属性 (font/line-height/text-align/text-indent/text-decoration/white-space/color)
+- 背景装饰属性 (background/opacity/cursor/list-style)
+- 生成内容属性 (content/quotes)
+- 其它 CSS3 属性，兼容性前缀打包自动添加 (border-radius/box-shadow/transition/transform/animation)  */
+  scroll-behavior: smooth;
+/*  background: linear-gradient(#ffffff, #87a6);
+  linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat/repeat-x repeat-y,
+*/
+}
+
+body {
+  margin: 0 57px;
+  background-color: #F8F4E1;
+  font-family: 'Noto Serif TC', serif;
+  /*font-family: 'Rosarivo', cursive;*/
+  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu Mono', monospace;*/
+}
+
+.title {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font: bold 37px "Rosarivo", cursive;
+  text-align: center;
+  text-shadow: 2px 2px 2px #E5E5CB;
+  background-color: #F8F4E1;
+}
+
+.b-one { 
+  text-align: center;
+  text-shadow: 1px 1px 3px white;
+  position: center;
+  margin: 63px auto 30px auto;
+  padding: .5ex .5em;
+  color: #F8F4E1;
+  background-color: #3C2A21;
+}
+
+.b-two {
+  margin: 0 auto;
+  padding: .5ex .5em;
+  font-family: 'Rosarivo', cursive;
+  color: #F8F4E1;
+  background-color: #3C2A21;
+}
+
+.b-three { 
+  text-align: center;
+  text-shadow: 1px 1px 3px white;
+  position: center;
+  margin: 63px 0 7px p0;
+  padding: .5ex .5em;
+  color: #F8F4E1;
+  background-color: #3C2A21;
+}
+
+.boxes {
+  text-align: center;
+  padding: 0; 
+}
+
+.boxpreview {
+  display: inline-block; 
+  width: 452px;
+  height: 412px;
+  margin: 37px 33px;
+  padding: 4px 4px 4px 4px; 
+  text-align: center;
+  vertical-align: top;
+  border-radius: 17px;
+  border: 3px solid #f8f4e1;
+  background-color: rgba(213, 206, 163, .5); /* rgba(197,232,152, 0.4);*/
+}
+
+.image {
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  position: relative;
+  width: 452px;
+  height: 327px;
+  top: -4px;
+  left: -4px;
+  border: 4px solid #B9AC92/*#CA955C*/;
+  border-radius: 16px;
+}
+
+.boxheading {
+  margin: 7px 0 0 0;
+  font-variant: small-caps;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: 'Rosarivo', cursive;
+  text-align: center;
+}
+
+.caption {
+  margin: 7px auto;
+  font-size: 120%;
+  font-family: 'Rosarivo', cursive;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: #4E3620;
+  text-decoration: none;
+}
+
+/* || BUGFIX: table & float 2023-11-28 by 17moonup
+*/
+table {
+  display: table;
+  box-sizing: border-box;
+  text-align: start;
+  table-layout: fixed;
+  margin: 17px auto;
+  border-collapse: collapse;
+}
+
+tr,
+th,
+td {
+  text-align: left;
+  padding: 7px 0;
+  font-variant: small-caps;
+  font-size: 120%;
+}
+
+th {
+  width: 93%;
+}
+
+td {
+  padding: 0 900px 0 0;
+  }
+
+.rotate-me {
+  float: right;
+  width: 170px;
+  height: 170px;
+  margin: 17px 4px;
+}
+
+.rotate-me img {
+  width: 170px;
+  height: 170px;
+}
+
+footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+/* || TODO: hover on the image, fill the boxpreview slowly and reset the opacity == 0;
+img:hover {
+  width: 452px;
+  height: 452px;
+}
+
+.boxpreview:hover {
+  border: 3px solid #DBCBBD;
+}
+

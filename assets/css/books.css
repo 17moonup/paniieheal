@@ -1,0 +1,21 @@
+html {
+  background-color: #f3f3f3;
+  writing-mode: vertical-rl;
+  font-variant-east-asian: proportional-width;
+}
+
+a {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  border-top: 2px solid black;
+}
+
+p::first-letter {
+}
