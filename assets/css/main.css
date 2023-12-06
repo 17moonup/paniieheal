@@ -41,6 +41,7 @@ font-family: 'Rosarivo', cursive;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
 */
+
 /* Winter style finished at 2023/11/27 */
 html {	
 /*ORDER
@@ -115,48 +116,69 @@ body {
 }
 
 .boxes {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  padding: 0; 
+  padding: 0;
 }
 
 .boxpreview {
   display: inline-block; 
+  position: relative;
   width: 492px;
   height: 470px;
   margin: 37px 57px;
   padding: 4px 4px 4px 4px; 
-  text-align: center;
-  transition: transform 0.5s;
   vertical-align: top;
   border-radius: 17px;
-  background-color: rgb(205, 201, 195); /* rgba(197,232,152, 0.4);*/
+  background-color: #CDC9C3; /* rgba(197,232,152, 0.4);*/
   cursor: default; /* just for knowledge, remeber to delete.*/
   overflow: hidden;/* adding the attribute at father positon;*/
-}
-/*|| TODO: set a down-border color as the background color.*/
-#image {
-  display: block;
-  position: relative;
-  top: -6px;
-  left: -14px;
-  margin: 0 auto;
-  width: 500px;
-  height: 379px;
-  border: 4px solid #f4f4f2;
-  border-radius: 16px;
-  animation-name: fill;
-  animation-duration: 0.7s;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
+  transform-style: preserve-3d;
+  transition: transform 0.5s; 
+  perspective: 1000px;
 }
 
-#image img {
-  display: block;
+.frontview,
+.backview {
+  position: absolute;
+  backface-visibility: hidden;
+} 
+.frontview {
+  transform: rotateY(0);
+}
+
+.backview {
+  background-color: black;
+  transform: rotateY(180deg);
+}
+/*|| TODO: set a down-border color as the background color.*/
+/*	FINISH */
+.image {
   position: relative;
+  top: -6px;
+  left: -8px;
+  margin: 0 auto;
+  width: 500px;
+  height: 390px;
+  border: 4px solid #CDC9C3;
+  border-top-color: #f4f4f2;
+  border-radius: 16px;
+  transition: transform 0.5s, width 0.5s, height 0.5s;
+}
+
+.image.enlarged {
   width: inherit;
   height: inherit;
-  border: 4px solid #f4f4f2;
-  border-radius: 16px;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+/*
+.image img {
+  position: relative;
+  margin: 0 auto;
+  width: inherit;
+  height: inherit;
+  border-radius: 16px 16px 8px 8px;
 }
 
 @keyframes fill {
@@ -169,7 +191,7 @@ body {
 	  height: 470px;
   }
 }
-
+*/
 .box-heading {
   margin: 7px 0 0 0;
   font-variant: small-caps;
@@ -183,6 +205,12 @@ body {
   margin: 7px auto;
   font-size: 120%;
   font-family: 'Rosarivo', cursive;
+  overflow-wrap: break-word;
+}
+
+.detail {
+  margin: 7px auto;
+  font:;
   overflow-wrap: break-word;
 }
 
@@ -222,13 +250,13 @@ td {
 
 #rotate-me {
   float: right;
-  width: 170px;s
+  width: 170px;
   height: 170px;
   margin: 7px 4px 0 0;
 }
 
 footer {
-  text-shadow: 1px 1px #BB99CD;s
+  text-shadow: 1px 1px #BB99CD;
   margin: 0 auto;
   text-align: center;
 }
