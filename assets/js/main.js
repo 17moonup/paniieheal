@@ -15,15 +15,14 @@ imgElement.onclick = function() {
  * 1.click to trigger the anima.(js)
  * 2.fill & filp to the details side.(css + js)
  * 3.click again to initial.(js)
-*/
+ */
 
-const fillflip = document.querySelector('.boxes');
-
-fillflip.addEventListener('click', function(event) {
-	const target = event.target;
-	if (target.classList.contains('image')) {
-		target.classList.toggle('enlarged');
-		target.closest('.boxpreview').classList.toggle('flipped');
+window.onload = function() {
+	var card = document.getElementsByClassName('card');
+	for (var i = 0; i < card.length; i++) {
+	  card[i].onclick = function() {
+		this.classList.toggle('flipped');
+		};
 	}
-});
+}
 

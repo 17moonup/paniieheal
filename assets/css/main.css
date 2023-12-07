@@ -2,66 +2,18 @@
 @decription: Cascading Style Sheet
 @author:Sy
 @updatetime:2023-11-02 15:19:54
-*/
-/*https://google.github.io/styleguide/htmlcssguide.html
+  https://google.github.io/styleguide/htmlcssguide.html
   https://cloud.tencent.com/developer/article/1835320
   https://blog.csdn.net/weixin_43883485/article/details/103504171
   https://alienzhou.github.io/fe-performance-journey/5-subresources/css.html#_4-%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%A0%91%E6%9E%84%E5%BB%BA
 BOXBOXBOXBOX
- */
-/*
- 单位	名称	等价换算
-cm	厘米	1cm = 37.8px = 25.2/64in
-mm	毫米	1mm = 1/10th of 1cm
-Q	四分之一毫米	1Q = 1/40th of 1cm
-in	英寸	1in = 2.54cm = 96px
-pc	派卡	1pc = 1/6th of 1in
-pt	点	1pt = 1/72th of 1in
-px	像素	1px = 1/96th of 1in
-*/
-/*
- 单位	相对于
-em	在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width。
-ex	字符“x”的高度。
-ch	数字“0”的宽度。
-rem	根元素的字体大小。
-lh	元素的行高。
-rlh	根元素的行高。当用于根元素的 font-size 或 line-height 属性时，它指的是这些属性的初始值。
-vw	视口宽度的 1%。
-vh	视口高度的 1%。
-vmin	视口较小尺寸的 1%。
-vmax	视口大尺寸的 1%。
-vb	在根元素的块向上，初始包含块的尺寸的 1%。
-vi	在根元素的行向上，初始包含块的尺寸的 1%。
-svw、svh	分别为视口较小尺寸的宽度和高度的 1%。
-lvw、lvh	分别为视口大尺寸的宽度和高度的 1%。
-dvw、dvh	分别为动态视口的宽度和高度的 1%。
-font-family: 'Noto Serif TC', serif;
-font-family: 'Rosarivo', cursive;
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Ubuntu Mono', monospace;
-*/
-
-/* Winter style finished at 2023/11/27 */
-html {	
-/*ORDER
+ORDER
 - 影响文档流的属性 (display/visibility/float/clear/position)
 - 盒模型的属性 (width/height/margin/padding/border/outline)
 - 排版属性 (font/line-height/text-align/text-indent/text-decoration/white-space/color)
 - 背景装饰属性 (background/opacity/cursor/list-style)
 - 生成内容属性 (content/quotes)
 - 其它 CSS3 属性，兼容性前缀打包自动添加 (border-radius/box-shadow/transition/transform/animation)  */
-  scroll-behavior: smooth;
-/*  background: linear-gradient(#ffffff, #87a6);
-  linear-gradient(
-        105deg,
-        rgba(255, 255, 255, 0.2) 39%,
-        rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat/repeat-x repeat-y,
-*/
-}
-
 body {
   margin: 0 57px;
   background-color: #F4F4F2;
@@ -115,84 +67,63 @@ body {
   background-color: #454545;/*#BBBFCA;*/
 }
 
-.boxes {
-  display: flex;
+.cards {
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
 }
 
-.boxpreview {
-  display: inline-block; 
+.card {
+  display: inline-block;
   position: relative;
-  width: 492px;
+  width: 500px;
   height: 470px;
   margin: 37px 57px;
-  padding: 4px 4px 4px 4px; 
+  transform-style: preserve-3d;
+  transition: all 0.57s;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 500px;
+  height: 470px;
   vertical-align: top;
-  border-radius: 17px;
-  background-color: #CDC9C3; /* rgba(197,232,152, 0.4);*/
+  border-radius: 16px;
   cursor: default; /* just for knowledge, remeber to delete.*/
   overflow: hidden;/* adding the attribute at father positon;*/
-  transform-style: preserve-3d;
-  transition: transform 0.5s; 
-  perspective: 1000px;
+  background-color: #cdc9c3;
+  transform: translateZ(50px);
 }
 
-.frontview,
-.backview {
-  position: absolute;
-  backface-visibility: hidden;
-} 
-.frontview {
-  transform: rotateY(0);
+.front {
+  z-index: 1;
 }
 
-.backview {
-  background-color: black;
+.back {
+  text-align: center;
+    /* 让在背面显示的内容转到背面 */
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.flipped {
   transform: rotateY(180deg);
 }
-/*|| TODO: set a down-border color as the background color.*/
-/*	FINISH */
+
 .image {
-  position: relative;
-  top: -6px;
-  left: -8px;
   margin: 0 auto;
-  width: 500px;
-  height: 390px;
-  border: 4px solid #CDC9C3;
-  border-top-color: #f4f4f2;
-  border-radius: 16px;
-  transition: transform 0.5s, width 0.5s, height 0.5s;
 }
 
-.image.enlarged {
-  width: inherit;
-  height: inherit;
-  transform: translate(-50%, -50%) scale(0.5);
-}
-/*
 .image img {
   position: relative;
   margin: 0 auto;
-  width: inherit;
-  height: inherit;
+  width: 500px;
+  height: 390px;
   border-radius: 16px 16px 8px 8px;
 }
 
-@keyframes fill {
-  from {
-	  width: 500px;
-	  height: 379px;
-  }
-  to {
-	  width: 500px;
-	  height: 470px;
-  }
-}
-*/
-.box-heading {
+
+.heading {
   margin: 7px 0 0 0;
   font-variant: small-caps;
   font-size: x-large;
@@ -208,9 +139,8 @@ body {
   overflow-wrap: break-word;
 }
 
-.detail {
+.details {
   margin: 7px auto;
-  font:;
   overflow-wrap: break-word;
 }
 
