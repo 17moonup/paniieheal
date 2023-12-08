@@ -1,3 +1,8 @@
+|| TODO: the center problem in other devices. 
+|| TODO: define a smooth the transitiom form. perspective;
+html {
+  background-color: #f4f4f2;
+}
 /*
 @decription: Cascading Style Sheet
 @author:Sy
@@ -16,10 +21,10 @@ ORDER
 - 其它 CSS3 属性，兼容性前缀打包自动添加 (border-radius/box-shadow/transition/transform/animation)  */
 body {
   margin: 0 57px;
-  background-color: #F4F4F2;
   font-family: 'Noto Serif TC', serif;
   /*font-family: 'Rosarivo', cursive;*/
   font-family: 'Ubuntu', sans-serif;
+  background-color: #f4f4f2;
   /*font-family: 'Ubuntu Mono', monospace;*/
 }
 
@@ -41,7 +46,6 @@ body {
   text-align: center;
   text-shadow: 1px 1px 3px white;
   font-size: 1.7em;
-  position: center;
   margin: 63px auto 30px auto;
   padding: .5ex .5em;
   color: #F8F4E1;/*weightful but not like black*/
@@ -80,7 +84,9 @@ body {
   height: 470px;
   margin: 37px 57px;
   transform-style: preserve-3d;
-  transition: all 0.57s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.57s;
+  perspective: 800px;
 }
 
 .front,
@@ -101,6 +107,7 @@ body {
 }
 
 .back {
+  opacity: 0.87;
   text-align: center;
     /* 让在背面显示的内容转到背面 */
   transform: rotateY(180deg) translateZ(50px);
