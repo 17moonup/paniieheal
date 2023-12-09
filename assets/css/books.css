@@ -1,15 +1,23 @@
 html {
   background-color: #f3f3f3;
   writing-mode: vertical-rl;
-  font-variant-east-asian: proportional-width;
+  font-family: 'LXGW WenKai TC', system-ui, serif;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 17px;
 }
 
 a {
+  display: block;
+  text-decoration: none;
+  padding: 0 17px;
   color: purple;
 }
 
 a:hover {
-  text-decoration: none;
+  
 }
 
 a:visited {
