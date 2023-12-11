@@ -1,5 +1,3 @@
-|| TODO: the center problem in other devices. 
-|| TODO: define a smooth the transitiom form. perspective;
 html {
   background-color: #f4f4f2;
 }
@@ -11,14 +9,7 @@ html {
   https://cloud.tencent.com/developer/article/1835320
   https://blog.csdn.net/weixin_43883485/article/details/103504171
   https://alienzhou.github.io/fe-performance-journey/5-subresources/css.html#_4-%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%A0%91%E6%9E%84%E5%BB%BA
-BOXBOXBOXBOX
-ORDER
-- 影响文档流的属性 (display/visibility/float/clear/position)
-- 盒模型的属性 (width/height/margin/padding/border/outline)
-- 排版属性 (font/line-height/text-align/text-indent/text-decoration/white-space/color)
-- 背景装饰属性 (background/opacity/cursor/list-style)
-- 生成内容属性 (content/quotes)
-- 其它 CSS3 属性，兼容性前缀打包自动添加 (border-radius/box-shadow/transition/transform/animation)  */
+*/
 body {
   margin: 0 57px;
   font-family: 'Noto Serif TC', serif;
@@ -37,7 +28,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  font: bold 37px "Rosarivo", cursive #495464;
+  font-family: "Rosarivo";
   text-align: center;
   background-color: #F4F4F2;
 }
@@ -99,22 +90,21 @@ body {
   cursor: default; /* just for knowledge, remeber to delete.*/
   overflow: hidden;/* adding the attribute at father positon;*/
   background-color: #cdc9c3;
-  transform: translateZ(50px);
+  transform: translateZ(1px);
 }
 
 .front {
-  z-index: 1;
+  
 }
 
 .back {
-  opacity: 0.87;
+  opacity: 0.97;
   text-align: center;
-    /* 让在背面显示的内容转到背面 */
-  transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(0);
 }
 
 .flipped {
-  transform: rotateY(180deg);
+  transform: rotateX(7deg) rotateY(180deg);
 }
 
 .image {
@@ -156,9 +146,6 @@ a {
   text-decoration: none;
 }
 
-/* || BUGFIX: table & float 2023-11-28 by 17moonup
- * FIXED at 2023-11-29 by 17moonup
-*/
 table {
   display: flex;
   flex: 1;
@@ -189,11 +176,9 @@ td {
   float: right;
   width: 170px;
   height: 170px;
-  margin: 7px 4px 0 0;
 }
 
 footer {
-  text-shadow: 1px 1px #BB99CD;
   margin: 0 auto;
   text-align: center;
 }
@@ -201,22 +186,3 @@ footer {
 a:hover {
   opacity: 0.8;
 }
-/*
-.image:active {
-  animation-name: flip;
-  animation-duration: 1.5s;
-  animation-timing-function: 0.5;
-  animation-iteration-count: infinite;
-}
-*/
-
-/* || TODO: click the image, fill the boxpreview slowly and reset the opacity == 0;
-img:hover {
-  width: 452px;
-  height: 452px;
-}
-
-.boxpreview:hover {
-  border: 3px solid #DBCBBD;
-}
-
