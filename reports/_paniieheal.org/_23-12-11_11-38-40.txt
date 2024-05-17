@@ -1,0 +1,4 @@
+# Dirsearch started Mon Dec 11 11:39:06 2023 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u paniieheal.org
+
+404   333B   http://paniieheal.org/.well-known/acme-challenge/dtfy
+403     4KB  http://paniieheal.org/.wp-config.php.swp

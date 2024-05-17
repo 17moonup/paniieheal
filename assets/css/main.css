@@ -19,6 +19,7 @@ body {
   /*font-family: 'Ubuntu Mono', monospace;*/
 }
 
+
 .title {
   display: block;
   position: fixed;
@@ -40,7 +41,7 @@ body {
   margin: 63px auto 30px auto;
   padding: .5ex .5em;
   color: #F8F4E1;/*weightful but not like black*/
-  background-color: #454545;
+  background-color: #222831;
 }
 
 .b-two {
@@ -122,6 +123,7 @@ body {
 
 .heading {
   margin: 7px 0 0 0;
+  color: black;
   font-variant: small-caps;
   font-size: x-large;
   font-weight: bold;

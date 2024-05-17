@@ -4,15 +4,26 @@ html {
   font-family: 'LXGW WenKai TC', system-ui, serif;
 }
 
+h1 {
+  font-size: 37px;
+  margin: 0 87px 0 37px;
+}
+
 p {
-  font-size: 1.2em;
-  margin: 17px;
+  margin: 17px 0 0 0;
+}
+
+span {
+  display: block;
+  font-size: 27px;
+  margin: 0 37px 0 17px;
 }
 
 a {
   display: block;
+  font-size: 1.3em;
   text-decoration: none;
-  padding: 0 17px;
+  padding: 5px 27px;
   color: purple;
 }
 
