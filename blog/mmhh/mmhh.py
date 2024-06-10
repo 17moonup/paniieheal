@@ -10,8 +10,8 @@ args = parser.parse_args()
 
 filename = args.input
 
-source_dir = '../books/'
-output_dir = '../../post/books/'
+source_dir = '../book/'
+output_dir = '../../post/book/'
 template_dir = 'templates'
 
 env = Environment(loader=FileSystemLoader(template_dir))

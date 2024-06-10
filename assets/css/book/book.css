@@ -1,0 +1,85 @@
+html {
+	background: #f4f4f2;
+	font-size: 16px;
+}
+
+body {
+	font-family: "LXGW WenKai TC", cursive;	
+    	line-height: 1.57;
+    	color: #333;
+    	margin: 0 11em;
+    	padding: 0;
+}
+/* 标题样式 */
+/* 書名*/
+h1 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 1px 1px brown;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+h2 { font-size: 2em;
+     text-align: center;
+}
+
+/* 作者\翻譯 */
+h3 {  
+     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+     font-size: 1.5em;
+     font-weight: bold;
+     text-align: center;
+     margin-top: 2em;
+     margin-bottom: 1em;
+}
+
+h2, h4 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+h4 { font-size: 1.25em; }
+
+/* 段落样式 */
+p {
+    font-size: 1.2rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/* 引用样式 */
+blockquote {
+    font-style: italic;
+    margin-left: 2em;
+    padding-left: 1em;
+    border-left: 4px solid #ccc;
+}
+
+/* 列表样式 */
+ul, ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
+
+a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005b8f;
+    text-decoration: underline;
+}
+/* 图像样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}

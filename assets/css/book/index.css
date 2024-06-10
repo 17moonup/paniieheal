@@ -1,7 +1,7 @@
 html {
   background-color: #f3f3f3;
   writing-mode: vertical-rl;
-  font-family: 'LXGW WenKai TC', system-ui, serif;
+  font-family: "LXGW WenKai TC", cursive;
 }
 
 h1 {
@@ -34,6 +34,19 @@ a:hover {
 a:visited {
   text-decoration: none;
   border-top: 2px solid black;
+}
+
+.with-bpmf {
+  position: relative;
+}
+
+.with-bpmf::before {
+  content: "ㄧ";
+  position: absolute;
+  top: -1.2em;
+  left: 0;
+  font-size: 0.8em;
+  color: #666;
 }
 
 p::first-letter {
