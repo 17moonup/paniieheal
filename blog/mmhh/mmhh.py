@@ -21,7 +21,7 @@ with open(os.path.join(source_dir, filename), 'r') as file:
 
 html_content = markdown.markdown(markdown_content)
 
-template = env.get_template('books.html')
+template = env.get_template('book.html')
 
 output_html = template.render(content=html_content)
 
