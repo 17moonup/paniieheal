@@ -1,5 +1,5 @@
 /* rotate-photo*/
-let imgContainer = document.getElementById("rotate-me");
+/*let imgContainer = document.getElementById("rotate-me");
 let imgElement = imgContainer.querySelector('img');
 
 imgElement.onclick = function() {
@@ -10,7 +10,7 @@ imgElement.onclick = function() {
 		imgElement.setAttribute("src", "img/5t5.jpg");
 	}
 };
-
+*/
 /*
  * 1.click to trigger the anima.(js)
  * 2.fill & filp to the details side.(css + js)
