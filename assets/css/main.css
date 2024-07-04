@@ -194,7 +194,9 @@ a:hover {
 @media(max-width: 767px) {
   font-size: 14px;
   .card {
-  	height: 424px;
+  	display: block;
+	margin: 17px auto;
+	height: 424px;
 	width: 300px;
 }
   .front .back {
