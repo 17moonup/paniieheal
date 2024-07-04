@@ -72,10 +72,8 @@ body {
 .card {
   display: inline-block;
   position: relative;
-  width: 85vw;
-  max-width: 500px;
-  height: auto;
-  aspect-ratio: 1 / 1.2;
+  width: 470px;
+  height: 530px;
   margin: 37px 57px;
   transform-style: preserve-3d;
   transition-timing-function: ease-in-out;
@@ -112,22 +110,21 @@ body {
 
 .image {
   flex: 1;
-  width: 100%;
-  height: 87%;
   margin: 0 auto;
 }
 
 .image img {
   position: relative;
   margin: 0 auto;
+  height: 430px;
   width: 100%;
   object-fit: cover;
-  border-radius: 16px 16px 8px 8px;
+  border-radius: 16px 16px 2px 2px;
 }
 
 
 .heading {
-  margin: 7px 0 0 0;
+  margin: 17px 0 0 0;
   color: black;
   font-variant: small-caps;
   font-size: x-large;
