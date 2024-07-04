@@ -200,12 +200,22 @@ a:hover {
 	width: 300px;
 }
   .front .back {
-        height: 424px;
+	height: 424px;
 	width: 300px;
 }
   .image img {
   	height: 308px;
 	width: 300px;
-	}
+	max-width: 100%;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	font-size: 1rem;
+	color: inherit;
+	text-decoration: none;}
