@@ -190,3 +190,16 @@ footer {
 a:hover {
   opacity: 0.8;
 }
+
+@media(max-width: 767px) {
+  font-size: 14px;
+  .card {
+  	height: 424px;
+	width: 300px;
+}
+  .image img {
+  	height: 308px;
+	width: 300px;
+	}
+}
+
