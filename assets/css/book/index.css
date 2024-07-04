@@ -1,12 +1,22 @@
 html {
   background-color: #f3f3f3;
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
   font-family: "LXGW WenKai TC", cursive;
 }
 
 h1 {
   font-size: 37px;
   margin: 0 87px 0 37px;
+}
+
+ruby {
+  font-size: 2em;
+}
+
+rt {
+  font-size: 0.8em;
 }
 
 p {
