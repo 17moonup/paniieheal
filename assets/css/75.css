@@ -31,38 +31,41 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  font-family: "Rosarivo";
+  font-family: "Rosarivo"; 
   text-align: center;
   background-color: #F4F4F2;
 }
 
 .b-one {/*color design rule: weightful but not like black*/ 
+  font-size: 1.77rem;
+  font-variant: small-caps;
   text-align: center;
-  text-shadow: 1px 1px 3px white;
-  margin: 63px auto 30px auto;
+  margin: 63px 17% 30px 17%;
   padding: .5ex .5em;
   color: #F8F4E1;/*weightful but not like black*/
-  background-color: #222831;
+  background-color: #454545;
 }
 
 .b-two {
-  margin: 30px auto;
+  font-size: 1.77rem;
+  margin: 30px 17%;
   padding: .5ex .5em;
-  font-family: 'Rosarivo', cursive;
   color: #F8F4E1;
   background-color: #454545;/*#4F709C*/;
 }
 
 .b-three { 
+  font-size: 1.77rem;
   text-align: right;
-  text-shadow: 1px 1px 3px white;
-  margin: 30px 0 0 0;
+  text-shadow: 1px 1px 1px purple;
+  margin: 30px 17% 0 17%;
   padding: .5ex .5em;
   color: #F8F4E1;
   background-color: #454545;/*#BBBFCA;*/
 }
 
 .cards {
+  margin: auto 7%;
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
@@ -154,7 +157,7 @@ table {
   flex: 1;
   box-sizing: border-box;
   text-align: start;
-  margin: 17px auto;
+  margin: 17px 17%;
   border-collapse: collapse;
 }
 
@@ -194,7 +197,7 @@ a:hover {
   body {
   	margin: auto;
 }
-  h1 {
+  .b-one, .b-two, b-three {
   	font-size: 1.3rem;
 }
   .card {
