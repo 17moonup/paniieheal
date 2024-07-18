@@ -12,13 +12,10 @@ html {
 */
 body {
   margin: 0 57px;
-  font-family: 'Noto Serif TC', serif;
+  font-family: "Inconsolata", monospace;
   font-size: 16px;
   line-height: 1.47;
-  /*font-family: 'Rosarivo', cursive;*/
-  font-family: 'Ubuntu', sans-serif;
   background-color: #f4f4f2;
-  /*font-family: 'Ubuntu Mono', monospace;*/
 }
 
 
@@ -31,12 +28,13 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  font-family: "Rosarivo"; 
+  font-family: "Baskervville SC", serif;
   text-align: center;
   background-color: #F4F4F2;
 }
 
 .b-one {/*color design rule: weightful but not like black*/ 
+  font-family: "Rock Salt", cursive;
   font-size: 1.77rem;
   font-variant: small-caps;
   text-align: center;
@@ -47,6 +45,7 @@ body {
 }
 
 .b-two {
+  font-family: "Indie Flower", cursive;
   font-size: 1.77rem;
   margin: 30px 17%;
   padding: .5ex .5em;
@@ -54,7 +53,8 @@ body {
   background-color: #454545;/*#4F709C*/;
 }
 
-.b-three { 
+.b-three {
+  font-family: "Indie Flower", cursive;
   font-size: 1.77rem;
   text-align: right;
   text-shadow: 1px 1px 1px purple;
@@ -65,7 +65,7 @@ body {
 }
 
 .cards {
-  margin: auto 7%;
+  margin: auto 13%;
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
@@ -97,7 +97,6 @@ body {
 }
 
 .front {
-  
 }
 
 .back {
@@ -126,10 +125,10 @@ body {
 
 
 .heading {
-  margin: 17px 0 0 0;
+  margin: 7px 0 0 0;
   color: black;
   font-variant: small-caps;
-  font-size: x-large;
+  font-size: 2rem;
   font-weight: bold;
   font-family: 'Rosarivo', cursive;
   text-align: center;
@@ -148,9 +147,18 @@ body {
 }
 
 a {
-  color: #40394A;
+  color: #1a2619;
   text-decoration: none;
 }
+
+.footer {
+  margin: auto 17%;
+  border-top: 1px solid grey;
+  }
+
+a .footer {
+  text-decoration: underline;
+  }
 
 table {
   display: flex;
@@ -166,28 +174,58 @@ th,
 td {
   text-align: left;
   padding: 7px 0;
-  font-variant: small-caps;
-  font-size: 120%;
 }
 
 th {
-  width: 93%;
+  font-size: 1.5rem;
 }
 
 td {
-  padding: 0 900px 0 0;
+  font-size: 1.2rem;
   }
 
+/*
 #rotate-me {
   float: right;
   width: 170px;
   height: 170px;
 }
+*/
 
 footer {
+  font-size: 1rem; 
   margin: 0 auto;
   text-align: center;
 }
+
+#book-bg {
+  background-color: rgba(38, 36, 25, 0.8);
+  }
+
+#book-hd {
+  color: rgb(29, 25, 38);
+  }
+
+/*
+#book-img {
+  border-bottom: 2px rgb(27, 38, 25);}
+*/
+
+#music-bg {
+  background-color: rgba(129, 133, 129, 0.7);
+  }
+
+#music-hd {
+  color: rgb(130, 134, 132);
+  }
+
+#film-bg {
+  background-color: rgba(43, 48, 151, 0.7);
+  }
+
+#film-hd {
+  color: rgb(43, 48, 151);
+  }
 
 a:hover {
   opacity: 0.8;

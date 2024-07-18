@@ -25,4 +25,31 @@ window.onload = function() {
 		};
 	}
 }
+        document.addEventListener('DOMContentLoaded', function() {
+            var colorThief = new ColorThief();
+            var img = document.getElementById('targetImage');
+            
+            if (img) {
+                // 确保图片已经加载完成
+                if (img.complete) {
+                    applyMainColor(img);
+                } else {
+                    img.addEventListener('load', function() {
+                        applyMainColor(img);
+                    });
+                }
+            } else {
+            }
 
+            function applyMainColor(image) {
+                try {
+                    var mainColor = colorThief.getColor(image);
+                    var colorDisplayDiv = document.getElementById('colorDisplay');
+                    var rgbColor = 'rgb(' + mainColor.join(',') + ')';
+                    colorDisplayDiv.style.backgroundColor = rgbColor;
+                    console.log('Main color applied:', rgbColor);
+                } catch (e) {
+                    console.error('Error applying main color:', e);
+                }
+            }
+        });
