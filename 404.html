@@ -1,21 +1,182 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>
-			404 Nice Try
-		</title>
-		<meta charset="utf-8">				  
-		<style>
-			img {
-				width: 800px;
-				height: 700px;
-			}
-		</style>
-	</head>
-	<body>
-		<a href="javascript:history.go(-1)">
-			<img src="img/404.png" alt="this is a dog to guide you back, nothing hera.">
-		</a>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 Nice Try</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    <a href="javascript:history.go(-1)">
+	<img src="img/404.png" alt="this is a dog to guide you back, nothing hera.">
+    </a>
+
+    <div class="container">
+        <div class="error-message">
+            <h1>404</h1>
+            <p>Oops! The page you're looking for doesn't exist.</p>
+            <a href="/" class="home-link">Go Back Home</a>
+        </div>
+        <div class="animation">
+            <div class="ghost">
+                <div class="face"></div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+    <style>
+/* 全局样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.error-message h1 {
+    font-size: 10em;
+    margin: 0;
+    color: #ff6b6b;
+}
+
+.error-message p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-link:hover {
+    background-color: #45a049;
+}
+
+.animation {
+    position: relative;
+}
+
+.ghost {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 5px solid #333;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    margin: 0 auto;
+    animation: float 2s infinite ease-in-out;
+}
+
+.ghost::before, .ghost::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+}
+
+.ghost::before {
+    left: -50px;
+    border-radius: 50% 50% 0 0;
+}
+
+.ghost::after {
+    right: -50px;
+    border-radius: 50% 50% 0 0;
+}
+
+.face {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.face::before, .face::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+}
+
+.face::before {
+    left: -20px;
+}
+
+.face::after {
+    right: -20px;
+}
+
+.shadow {
+    width: 120px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: shadow 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes shadow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+}
+
+</style>
+<script>
+	// script.js
+// 这里不需要复杂的JavaScript，仅用来演示如何添加一些简单的动态效果
+document.addEventListener('DOMContentLoaded', () => {
+    const ghost = document.querySelector('.ghost');
+    ghost.addEventListener('mouseover', () => {
+        ghost.style.backgroundColor = '#ff6b6b';
+    });
+    ghost.addEventListener('mouseout', () => {
+        ghost.style.backgroundColor = '#fff';
+    });
+});
+	</script>
+  </body>
+
 </html>
 

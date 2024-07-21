@@ -1,0 +1,92 @@
+/* 全局樣式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 標題樣式 */
+header .title {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+/* 主要內容區域樣式 */
+main {
+    padding: 20px;
+}
+
+/* 歷史記錄樣式 */
+.history details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.history summary {
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+    color: #2c3e50;
+}
+
+.history details[open] summary {
+    color: #4CAF50;
+}
+
+.history ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+.history li {
+    margin-bottom: 10px;
+}
+
+/* 頁腳樣式 */
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* 特殊符號樣式 */
+.footer i {
+    font-style: normal;
+    margin: 0 5px;
+}

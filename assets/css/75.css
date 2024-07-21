@@ -1,71 +1,77 @@
-html {
-  background-color: #f4f4f2;
-}
-/*
-@decription: Cascading Style Sheet
-@author:Sy
-@updatetime:2023-11-02 15:19:54
+/*@author: 17moonup
   https://google.github.io/styleguide/htmlcssguide.html
   https://cloud.tencent.com/developer/article/1835320
   https://blog.csdn.net/weixin_43883485/article/details/103504171
   https://alienzhou.github.io/fe-performance-journey/5-subresources/css.html#_4-%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%A0%91%E6%9E%84%E5%BB%BA
 */
-body {
-  margin: 0 57px;
-  font-family: "Inconsolata", monospace;
-  font-size: 16px;
-  line-height: 1.47;
+		
+html {
   background-color: #f4f4f2;
 }
 
+body {
+  margin: 0 15vw;
+  font-family: "Gentium Plus", serif;
+  font-size: 10.5pt;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: #f4f4f2;
+}
 
 .title {
-  display: block;
   position: fixed;
   z-index: 999;
-  margin: auto;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   font-family: "Baskervville SC", serif;
+  font-size: 24pt; /*[x1] 29px 1.8em(12pt 16px 1em)*/
+  line-height: 2;
   text-align: center;
   background-color: #F4F4F2;
 }
 
+a {
+  color: #1a2619;
+  text-decoration: none;}
+
+					/*分割欄*/
 .b-one {/*color design rule: weightful but not like black*/ 
   font-family: "Rock Salt", cursive;
-  font-size: 1.77rem;
+  font-size: 1.5rem;
   font-variant: small-caps;
   text-align: center;
-  margin: 63px 17% 30px 17%;
-  padding: .5ex .5em;
+  text-shadow: 1px 1px green;
+  line-height: 2;
+  margin: 5% 10% 3% 10%;
   color: #F8F4E1;/*weightful but not like black*/
   background-color: #454545;
 }
 
 .b-two {
-  font-family: "Indie Flower", cursive;
-  font-size: 1.77rem;
-  margin: 30px 17%;
-  padding: .5ex .5em;
+  font-family: "Gentium Plus", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2;
+  margin: 3% 10% 1% 10%;
   color: #F8F4E1;
   background-color: #454545;/*#4F709C*/;
 }
 
 .b-three {
   font-family: "Indie Flower", cursive;
-  font-size: 1.77rem;
+  font-size: 1.5rem;
   text-align: right;
   text-shadow: 1px 1px 1px purple;
-  margin: 30px 17% 0 17%;
-  padding: .5ex .5em;
+  line-height: 2;
+  margin: 1% 10%;
   color: #F8F4E1;
   background-color: #454545;/*#BBBFCA;*/
-}
-
+}	
+					/*卡片樣式*/
 .cards {
-  margin: auto 13%;
+  margin: 0 10%;
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
@@ -74,9 +80,9 @@ body {
 .card {
   display: inline-block;
   position: relative;
-  width: 470px;
-  height: 530px;
-  margin: 37px 57px;
+  width: 25rem;
+  height: 30rem;
+  margin: 3% 5%;
   transform-style: preserve-3d;
   transition-timing-function: ease-in-out;
   transition-duration: 0.57s;
@@ -108,36 +114,34 @@ body {
 .flipped {
   transform: rotateX(7deg) rotateY(180deg);
 }
-
+					/*卡片內容樣式*/
 .image {
-  flex: 1;
   margin: 0 auto;
+  flex: 1;
 }
 
 .image img {
   position: relative;
-  margin: 0 auto;
-  height: 430px;
+  height: 25rem;
   width: 100%;
   object-fit: cover;
   border-radius: 16px 16px 2px 2px;
 }
 
-
 .heading {
-  margin: 7px 0 0 0;
+  margin: auto;
   color: black;
   font-variant: small-caps;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: 'Rosarivo', cursive;
+  font-size: 1.75rem;
+  font-family: "Gloria Hallelujah", cursive;
+  line-height: 1.5;
   text-align: center;
 }
 
 .caption {
-  margin: 7px auto;
+  margin: auto;
   font-size: 120%;
-  font-family: 'Rosarivo', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   overflow-wrap: break-word;
 }
 
@@ -145,27 +149,13 @@ body {
   margin: 7px auto;
   overflow-wrap: break-word;
 }
-
-a {
-  color: #1a2619;
-  text-decoration: none;
-}
-
-.footer {
-  margin: auto 17%;
-  border-top: 1px solid grey;
-  }
-
-a .footer {
-  text-decoration: underline;
-  }
-
+					/* ABOUT & CONTACT */
 table {
   display: flex;
   flex: 1;
   box-sizing: border-box;
   text-align: start;
-  margin: 17px 17%;
+  margin: 2% 10%;
   border-collapse: collapse;
 }
 
@@ -173,7 +163,7 @@ tr,
 th,
 td {
   text-align: left;
-  padding: 7px 0;
+  line-height: 2;
 }
 
 th {
@@ -183,7 +173,20 @@ th {
 td {
   font-size: 1.2rem;
   }
+					/* FOOTER */
+.footer {
+  margin: auto 10%;
+  color: grey;
+  border-top: 1px solid grey;
+ }
 
+.footer a {
+  text-decoration: underline;
+  }
+					/* Fake Class */
+a:hover {
+  opacity: 0.8;
+  }
 /*
 #rotate-me {
   float: right;
@@ -191,13 +194,7 @@ td {
   height: 170px;
 }
 */
-
-footer {
-  font-size: 1rem; 
-  margin: 0 auto;
-  text-align: center;
-}
-
+					/* ID */
 #book-bg {
   background-color: rgba(38, 36, 25, 0.8);
   }
@@ -226,10 +223,6 @@ footer {
 #film-hd {
   color: rgb(43, 48, 151);
   }
-
-a:hover {
-  opacity: 0.8;
-}
 
 @media(max-width: 767px) {
   body {

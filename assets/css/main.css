@@ -1,15 +1,13 @@
-html {
-  background-color: #f4f4f2;
-}
-/*
-@decription: Cascading Style Sheet
-@author:Sy
-@updatetime:2023-11-02 15:19:54
+/*@author: 17moonup
   https://google.github.io/styleguide/htmlcssguide.html
   https://cloud.tencent.com/developer/article/1835320
   https://blog.csdn.net/weixin_43883485/article/details/103504171
-  https://alienzhou.github.io/fe-performance-journey/5-subresources/css.html#_4-%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%A0%91%E6%9E%84%E5%BB%BA
-*/
+  https://alienzhou.github.io/fe-performance-journey/5-subresources/css.html#_4-%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%A0%91%E6%9E%84%E5%BB%BA */
+					/*通用樣式*/
+html {
+  background-color: #f4f4f2;
+}
+
 body {
   margin: 0 57px;
   font-family: 'Noto Serif TC', serif;
@@ -19,7 +17,11 @@ body {
   /*font-family: 'Ubuntu Mono', monospace;*/
 }
 
-
+a {
+  color: #40394a;
+  text-decoration: none;
+  }
+					/*網站標題*/
 .title {
   display: block;
   position: fixed;
@@ -33,7 +35,7 @@ body {
   text-align: center;
   background-color: #F4F4F2;
 }
-
+					/*分割欄*/
 .b-one {/*color design rule: weightful but not like black*/ 
   text-align: center;
   text-shadow: 1px 1px 3px white;
@@ -62,7 +64,7 @@ body {
   color: #F8F4E1;
   background-color: #454545;/*#BBBFCA;*/
 }
-
+					/*卡片樣式*/
 .cards {
   flex-wrap: wrap;
   text-align: center;
@@ -94,10 +96,6 @@ body {
   transform: translateZ(1px);
 }
 
-.front {
-  
-}
-
 .back {
   opacity: 0.97;
   text-align: center;
@@ -107,7 +105,7 @@ body {
 .flipped {
   transform: rotateX(7deg) rotateY(180deg);
 }
-
+					/*卡片內容*/
 .image {
   flex: 1;
   margin: 0 auto;
@@ -121,7 +119,6 @@ body {
   object-fit: cover;
   border-radius: 16px 16px 2px 2px;
 }
-
 
 .heading {
   margin: 17px 0 0 0;
@@ -144,12 +141,7 @@ body {
   margin: 7px auto;
   overflow-wrap: break-word;
 }
-
-a {
-  color: #40394A;
-  text-decoration: none;
-}
-
+					/*ABOUT & CONCACT*/
 table {
   display: flex;
   flex: 1;
@@ -168,10 +160,6 @@ td {
   font-size: 120%;
 }
 
-th {
-  width: 93%;
-}
-
 td {
   padding: 0 900px 0 0;
   }
@@ -182,10 +170,13 @@ td {
   height: 170px;
 }
 
-footer {
-  margin: 0 auto;
-  text-align: center;
+.footer {
+  margin: 0 17%;
 }
+
+.footer a {
+  text-decoration: underline;
+} 
 
 a:hover {
   opacity: 0.8;
