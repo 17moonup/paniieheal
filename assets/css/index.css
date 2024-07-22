@@ -241,8 +241,12 @@ a:hover {
 	font-size: 1.5rem;
   	line-height: 1.7;
 }
+
+  .b-one {
+  	margin: 50px 10% 3% 10%;
+}
+
   .b-one, .b-two {
-	margin: 
 	line-height: 1.5;
 	font-size: 1.2rem;
 	background-color: darkslateblue;
