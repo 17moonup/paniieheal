@@ -46,7 +46,7 @@ a {
   line-height: 1.7;
   margin: 77px 10% 3% 10%;
   color: #F8F4E1;/*weightful but not like black*/
-  background-color: grey;//#454545;
+  background-color: #454545;
 }
 
 .b-two {
@@ -56,7 +56,7 @@ a {
   line-height: 1.7;
   margin: 3% 10% 1% 10%;
   color: #F8F4E1;
-  background-color: grey;//#454545;/*#4F709C*/;
+  background-color: #454545;/*#4F709C*/;
 }
 
 .b-three {
@@ -67,7 +67,7 @@ a {
   line-height: 1.7;
   margin: 1% 10%;
   color: #F8F4E1;
-  background-color: grey;//#454545;/*#BBBFCA;*/
+  background-color: #454545;/*#BBBFCA;*/
 }	
 					/*卡片樣式*/
 .cards {
@@ -238,16 +238,19 @@ a:hover {
   	margin: auto;
 }
   .title {
+	font-size: 1.5rem;
   	line-height: 1.7;
 }
   .b-one, .b-two {
 	margin: 
 	line-height: 1.5;
 	font-size: 1.2rem;
+	background-color: darkslateblue;
 }
   .b-three {
   	line-height: 2;
 	font-size: 1rem;
+	background-color: darkslateblue;
 }
   .card {
 	margin: 3% 5%;
@@ -277,6 +280,7 @@ a:hover {
   }
   
   .footer a, .footer{
-  	font-size: 0.8rem;
-  }
+	font-size: 0.8rem;
+	text-align: center;
+}
  }
