@@ -282,6 +282,10 @@ a:hover {
   td {
   	font-size: 1rem;
   }
+
+  .footer span {
+  	display: block;
+}
   
   .footer a, .footer{
 	font-size: 0.8rem;

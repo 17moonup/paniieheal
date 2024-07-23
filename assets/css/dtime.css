@@ -1,13 +1,17 @@
 /* 全局樣式 */
 body {
+    font-size: 12pt;
     font-family: 'Arial', sans-serif;
     background-color: #f5f7fa;
     color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.5;
 }
-
+a {
+    color: indigo;
+    text-decoration: none;
+}
 /* 標題樣式 */
 header .title {
     background-color: #4CAF50;
@@ -19,8 +23,7 @@ header .title {
 
 header .title h1 {
     margin: 0;
-    font-size: 2.5em;
-    font-weight: normal;
+    font-size: 2.5rem;
 }
 
 /* 主要內容區域樣式 */
@@ -40,7 +43,7 @@ main {
 }
 
 .history summary {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     cursor: pointer;
     outline: none;
     padding: 5px;
@@ -51,42 +54,69 @@ main {
     color: #4CAF50;
 }
 
-.history ul {
+.build {
+    font-size: 0.9rem;
+    color: mediumseagreen;
+}
+
+.fix {
+    font-size: 0.9rem;
+    color: teal;
+}
+
+ul {
     list-style: disc inside;
     padding-left: 20px;
 }
 
-.history li {
+li {
     margin-bottom: 10px;
+}
+
+.date {
+    float: right;
+    font-style: italic;
+    color: grey;
+    text-align: right;
+    }
+
+ details { 
+    overflow: hidden;
+ }
+
+ details[open] summary ~ * {
+    animation: expand 1s ease-in-out forwards;
+ }
+
+ @keyframes expand {
+    from {
+    opacity: 0;
+    max-height: 0;
+ }
+    to {
+    opacity: 1;
+    max-height: 100vh; /* You can adjust this value based on your content */
+    }
 }
 
 /* 頁腳樣式 */
 .footer {
+    font-size: 1rem;
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-.footer p {
-    margin: 0;
-}
+.footer span { 
+    display: block;
+    margin: 0 0 -7px 0;
+}   
 
 .footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.footer a:hover {
+    color: darkslateblue;
     text-decoration: underline;
 }
 
-/* 特殊符號樣式 */
-.footer i {
-    font-style: normal;
-    margin: 0 5px;
-}
