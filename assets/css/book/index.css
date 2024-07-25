@@ -1,47 +1,82 @@
+//@Author: 17moonup
+//@Time: 2024/07/25
+
 html {
   background-color: #f3f3f3;
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -moz-writing-mode: vertical-rl;
-  font-family: "LXGW WenKai TC", cursive;
 }
 
-h1 {
-  font-size: 37px;
-  margin: 0 87px 0 37px;
+body {
+  margin: 20px;
+  font-size: 10.5pt;
+  font-family: "LXGW WenKai TC", cursive;
+  line-height: 1.5;
+  background-color: #f3f3f3;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
 }
+
+main {
+  margin: 2rem 10rem 0 0;
+  writing-mode: vertical-rl;
+  }
 
 ruby {
-  font-size: 2em;
+  font-size: 3rem;
 }
 
 rt {
-  font-size: 0.8em;
+  padding: 0 12px 0 0;
+  text-orientation: upright;
+  font-size: 37%;
+  letter-spacing: 0;
+  ruby-align: center;
+  text-align: center; /* chrome */
 }
 
-p {
-  margin: 17px 0 0 0;
+summary {
+  font-size: 2rem;
+  }
+
+summary::-webkit-details-marker {
+    display: none;
 }
 
-span {
-  display: block;
-  font-size: 27px;
-  margin: 0 37px 0 17px;
+ul {
+  font-size: 1.5rem;
+  list-style: Number;
+  color: darkmagenta;
 }
+
+li {
+  margin: 0 3rem; 
+  }
 
 a {
-  display: block;
-  font-size: 1.3em;
+  font-size: 1.5rem;
   text-decoration: none;
   padding: 5px 27px;
   color: purple;
 }
 
-a:hover {
-  
-}
+#title {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  margin: 7px auto;
+  background-color: #f3f3f3;
+  }
+
+#title a {
+  color: black;}
 
 a:visited {
+  color: darkpurple;
   text-decoration: none;
   border-top: 2px solid black;
 }
@@ -61,3 +96,9 @@ a:visited {
 
 p::first-letter {
 }
+
+@counter-style Number {
+  system: "numeric";
+  symbols: "  壹" "  貳" "  叁" "  肆" "  伍" "  陸" "  柒" "  捌" "  玖" "  拾" "拾壹" "拾貳" "拾弎" "拾肆" "拾伍" "拾陸" "拾柒" "拾捌" "十玖" "貳〇" "貳壹";
+  suffix: "";
+  }
