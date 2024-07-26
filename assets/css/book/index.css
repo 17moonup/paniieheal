@@ -29,7 +29,7 @@ ruby {
 }
 
 rt {
-  padding: 0 12px 0 0;
+  padding: 2px 12px 0 0;
   text-orientation: upright;
   font-size: 37%;
   letter-spacing: 0;
@@ -37,23 +37,52 @@ rt {
   text-align: center; /* chrome */
 }
 
+details {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+details[open] summary ~ * {
+  animation: expand 1s ease-in-out forwards;
+}
+
+@keyframes expand {
+  from {
+  opacity: 0;
+  max-height: 0;
+  }
+  to {
+  opacity: 1;
+  max-height: 100vh;
+  }
+}
+
+details > summary::before {
+  content: ""; 
+  }
+
 summary {
+  list-style: none;
   font-size: 2rem;
   }
 
 summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 ul {
   font-size: 1.5rem;
   list-style: Number;
-  color: darkmagenta;
+  color: black;//darkmagenta;
 }
 
 li {
   margin: 0 3rem; 
-  }
+}
+
+li:hover {
+  text-shadow: 0 1px 1px lightskyblue;//cornflowerblue;
+}
 
 a {
   font-size: 1.5rem;
@@ -62,43 +91,54 @@ a {
   color: purple;
 }
 
-#title {
+.title {
   position: fixed;
+  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
   font-size: 3rem;
+  text-shadow: 0.7px 0.1px seagreen;
   margin: 7px auto;
+  padding: 0 5px;
   background-color: #f3f3f3;
+  opacity: 0.97;
   }
 
-#title a {
-  color: black;}
+a:hover { 
+  text-decoration: underline;
+}
 
-a:visited {
-  color: darkpurple;
+.title a {
+  color: black;
   text-decoration: none;
-  border-top: 2px solid black;
-}
-
-.with-bpmf {
-  position: relative;
-}
-
-.with-bpmf::before {
-  content: "ㄧ";
-  position: absolute;
-  top: -1.2em;
-  left: 0;
-  font-size: 0.8em;
-  color: #666;
-}
-
-p::first-letter {
 }
 
 @counter-style Number {
   system: "numeric";
   symbols: "  壹" "  貳" "  叁" "  肆" "  伍" "  陸" "  柒" "  捌" "  玖" "  拾" "拾壹" "拾貳" "拾弎" "拾肆" "拾伍" "拾陸" "拾柒" "拾捌" "十玖" "貳〇" "貳壹";
-  suffix: "";
-  }
+  suffix: "|"; 
+}
+
+@media screen and (max-width: 1290px) {
+
+rubt {
+   font-size: 3.5rem;
+} 
+.title {
+   font-size: 
+   text-shadow: none;
+}
+  li:hover {
+   text-shadow: none;
+}
+  a {
+   font-size: 1.7rem;
+}
+  ul {
+  font-size: 1.7rem;
+}
+  details {
+  box-shadow: none;
+}
+  } 
