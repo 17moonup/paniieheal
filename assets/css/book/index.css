@@ -24,12 +24,27 @@ main {
   writing-mode: vertical-rl;
 }
 
+.title {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  height: 100vh;
+  text-shadow: 0.7px 0.1px seagreen;
+  margin: 7px auto;
+  padding: 0 5px;
+  background-color: #f3f3f3;
+  opacity: 0.95;
+}
+
 ruby {
   font-size: 3rem;
 }
 
 rt {
-  padding: 2px 12px 0 0;
+  /*--Big Bug--*/ //padding: 2px 12px 0 0;
   text-orientation: upright;
   font-size: 37%;
   letter-spacing: 0;
@@ -40,6 +55,32 @@ rt {
 details {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin: 0 auto;
+}
+
+summary {
+  list-style: none;
+  font-size: 2.5rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+ul {
+  font-size: 1.5rem;
+  list-style: Number;
+  color: black;//darkmagenta;
+}
+
+li {
+  margin: 0 3rem; 
+}
+
+a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 5px 27px;
+  color: purple;
 }
 
 details[open] summary ~ * {
@@ -61,50 +102,6 @@ details > summary::before {
   content: ""; 
   }
 
-summary {
-  list-style: none;
-  font-size: 2rem;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-ul {
-  font-size: 1.5rem;
-  list-style: Number;
-  color: black;//darkmagenta;
-}
-
-li {
-  margin: 0 3rem; 
-}
-
-li:hover {
-  text-shadow: 0 1px 1px lightskyblue;//cornflowerblue;
-}
-
-a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  padding: 5px 27px;
-  color: purple;
-}
-
-.title {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 3rem;
-  text-shadow: 0.7px 0.1px seagreen;
-  margin: 7px auto;
-  padding: 0 5px;
-  background-color: #f3f3f3;
-  opacity: 0.97;
-}
-
 a:hover { 
   text-decoration: underline;
 }
@@ -114,29 +111,36 @@ a:hover {
   text-decoration: none;
 }
 
+li:hover {
+  text-shadow: 0 1px 1px lightskyblue;//cornflowerblue;
+}
+
 @counter-style Number {
   system: "numeric";
-  symbols: "  壹" "  貳" "  叁" "  肆" "  伍" "  陸" "  柒" "  捌" "  玖" "  拾" "拾壹" "拾貳" "拾弎" "拾肆" "拾伍" "拾陸" "拾柒" "拾捌" "十玖" "貳〇" "貳壹";
+  symbols: "  壹" "  貳" "  叁" "  肆" "  伍" "  陸" "  柒" "  捌" "  玖" "  拾" "十壹" "十貳" "十叁" "十肆" "十伍" "十陸" "十柒" "十捌" "十玖" "貳十" "貳壹";
   suffix: "|"; 
 }
 
 @media screen and (max-width: 1080px) {
 
 ruby {
-   font-size: 3.5rem;
+  font-size: 3.5rem;
 } 
 
 .title {
-   font-size: 
-   text-shadow: none;
+  font-size: 3.5rem;
+  text-shadow: none;
 }
 
+summary {
+  font-size: 3rem;}
+
 li:hover {
-   text-shadow: none;
+  text-shadow: none;
 }
 
 a {
-   font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
 ul {
@@ -146,4 +150,4 @@ ul {
 details {
   box-shadow: none;
 }
-  } 
+  }
