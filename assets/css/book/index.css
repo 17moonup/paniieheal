@@ -22,7 +22,7 @@ body {
 main {
   margin: 2rem 10rem 0 0;
   writing-mode: vertical-rl;
-  }
+}
 
 ruby {
   font-size: 3rem;
@@ -64,7 +64,7 @@ details > summary::before {
 summary {
   list-style: none;
   font-size: 2rem;
-  }
+}
 
 summary::-webkit-details-marker {
   display: none;
@@ -103,7 +103,7 @@ a {
   padding: 0 5px;
   background-color: #f3f3f3;
   opacity: 0.97;
-  }
+}
 
 a:hover { 
   text-decoration: underline;
@@ -120,25 +120,30 @@ a:hover {
   suffix: "|"; 
 }
 
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1080px) {
 
-rubt {
+ruby {
    font-size: 3.5rem;
 } 
+
 .title {
    font-size: 
    text-shadow: none;
 }
-  li:hover {
+
+li:hover {
    text-shadow: none;
 }
-  a {
+
+a {
    font-size: 1.7rem;
 }
-  ul {
+
+ul {
   font-size: 1.7rem;
 }
-  details {
+
+details {
   box-shadow: none;
 }
   } 
