@@ -130,7 +130,8 @@ ruby {
 }
 
 summary {
-  font-size: 3rem;}
+  font-size: 3rem;
+}
 
 li:hover {
   text-shadow: none;
@@ -141,7 +142,7 @@ a {
 }
 
 ul {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 details {
