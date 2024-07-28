@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 20px;
   font-size: 10.5pt;
-  background-color: #f3f3f3;
+  background-color: rgba(15, 15, 15);
   font-family: Gloria Hallelujah, serif;
   overflow: hidden; /* Prevents scrollbar */
 }
@@ -17,31 +17,34 @@ a {
   margin: 1rem 8rem;
 }
 
+.title a {
+  color: gold;}
+
 .carousel {
   display: flex;
-  overflow: hidden;
   white-space: nowrap;
   margin-bottom: 20px;
 }
 
 .carousel img {
-  height: 250px;
+  height: 220px;
   margin: 0 10px;
   border-radius: 12px;
+  object-fit: cover;
 }
- 
+
 @keyframes scroll-left {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
+  0% {
+      transform: translateX(0);
+     }
+  100% {
+      transform: translateX(-100%);
+       } 
+ }
 
 @keyframes scroll-right {
             0% {
-                transform: translateX(-100%);
+                transform: translateX(0);
             }
             100% {
                 transform: translateX(100%);
@@ -49,11 +52,11 @@ a {
         }
 
 .scroll-left {
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 20s linear infinite alternate-reverse;
 }
 
 .scroll-right {
-  animation: scroll-right 30s linear infinite;
+  animation: scroll-right 20s linear infinite alternate-reverse;
 }
 
 footer {
