@@ -13,6 +13,7 @@ a {
 }
 
 .title {
+  display: block;
   font-size: 1.2rem;
   margin: 1rem 8rem;
 }
@@ -35,7 +36,7 @@ a {
 
 @keyframes scroll-left {
   0% {
-      transform: translateX(0);
+      transform: translateX(100%);
      }
   100% {
       transform: translateX(-100%);
@@ -43,20 +44,20 @@ a {
  }
 
 @keyframes scroll-right {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(100%);
-            }
-        }
+   0% {
+      transform: translateX(-100%);
+      }
+   100% {
+      transform: translateX(100%);
+      }
+}
 
 .scroll-left {
-  animation: scroll-left 20s linear infinite alternate-reverse;
+  animation: scroll-left 60s linear infinite reverse;
 }
 
 .scroll-right {
-  animation: scroll-right 20s linear infinite alternate-reverse;
+  animation: scroll-right 60s linear infinite reverse;
 }
 
 footer {
@@ -81,4 +82,63 @@ footer {
 .footer a {
     color: darkslateblue;
     text-decoration: underline;
+}
+
+        .moon-button {
+	    float: right;
+	    padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            transition: transform 0.3s ease;
+        }
+        .moon-button svg {
+            width: 20px;
+            height: 20px;
+            fill: #d6ecf0;
+            transition: fill 0.3s ease;
+        }
+        .options {
+	    float: right;
+	    width: 5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            background-color: #d6ecf0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .options.show {
+            max-height: 200px; /* Adjust based on content size */
+        }
+        .options ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .options li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .options li:last-child {
+            border-bottom: none;
+        }
+
+@media screen and (max-width: 1089px) {
+  body {
+  	margin: auto;
+	font-size: 1rem;
+}
+  .title {
+	margin: 1rem 0 3rem 2rem;
+	font-size: 1rem;
+	}
+  .carousel img {
+  	height: 10rem;
+}
 }
