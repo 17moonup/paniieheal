@@ -1,0 +1,16 @@
+# VPN UPDATE.log
+
+> 更新原因：其實是由於2024/07/02之前的域名(suyiie.xyz)到期，更新後出錯，加上服務器版本老舊(FreeBSD，本著能跑的輪子就是好輪子的原則一直沒有管，但實在無法忍受迷幻的文件路徑且時間還算富裕，還可以順便拿來練練手便有了此次記錄。
+
+### #1
+
+#### SFTP
+
+Get cf.ini , nginx.config, config.json
+
+### #2
+
+#### Clondcone reBuild Debian 13
+
+### #3
+

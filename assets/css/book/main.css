@@ -30,7 +30,7 @@ main {
   top: 0;
   right: 0;
   bottom: 0;
-  font-size: 3rem;
+  font-size: 3.2rem;
   text-shadow: 0.7px 0.1px seagreen;
   background-color: #f3f3f3;
   opacity: 0.95;
@@ -64,19 +64,21 @@ summary::-webkit-details-marker {
 }
 
 ul {
+  margin: 1rem auto;
+  padding: 2rem 0;
   font-size: 1.5rem;
   list-style: Number;
   color: black;//darkmagenta;
 }
 
 li {
-  margin: 0 3rem; 
+  padding: 0 2rem;
+// little bug: ul title unmatch to a. margin: 0 3rem; 
 }
 
 a {
   font-size: 1.5rem;
   text-decoration: none;
-  padding: 5px 27px;
   color: purple;
 }
 
@@ -104,6 +106,7 @@ a:hover {
 }
 
 .title a {
+  margin: 1rem auto;
   color: black;
   text-decoration: none;
 }
