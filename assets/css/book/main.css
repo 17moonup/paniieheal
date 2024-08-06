@@ -2,7 +2,7 @@
 //@Time: 2024/07/25
 
 html {
-  background-color: #f3f3f3;
+  background-color: #f4f4f4;
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -moz-writing-mode: vertical-rl;
@@ -51,7 +51,7 @@ rt {
 
 details {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin: 0 auto;
+  margin: 0 3rem;
 }
 
 summary {
@@ -65,8 +65,8 @@ summary::-webkit-details-marker {
 
 ul {
   margin: 1rem auto;
-  padding: 2rem 0;
-  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.65rem;
   list-style: Number;
   color: black;//darkmagenta;
 }
@@ -77,7 +77,7 @@ li {
 }
 
 a {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   text-decoration: none;
   color: purple;
 }

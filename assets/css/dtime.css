@@ -80,7 +80,7 @@ li {
  }
 
  details[open] summary ~ * {
-    animation: expand 1s ease-in-out forwards;
+    animation: expand 2s ease-in-out forwards;
  }
 
  @keyframes expand {
