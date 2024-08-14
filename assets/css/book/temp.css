@@ -1,5 +1,5 @@
 html {
-	background: #f4f4f2;
+	background: #f3f3f3;
 	font-size: 10.5pt;
 }
 
@@ -7,7 +7,7 @@ body {
 	font-family: "LXGW WenKai TC", cursive;	
     	line-height: 1.57;
     	color: #333;
-    	margin: 2rem 15rem;
+    	margin: 2rem 10rem;
 }
 /* 标题样式 */
 /* 書名*/
@@ -114,7 +114,7 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1080px) {
     body {
     	margin: 0 1rem;
 }
