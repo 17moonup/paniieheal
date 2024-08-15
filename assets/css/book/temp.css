@@ -27,7 +27,7 @@ h1 {
     font-family: "LXGW WenKai", cursive, "Gentium Plus", serif;
     font-size: 3.5rem;
     text-align: center;
-    text-shadow: 1px 1px brown;
+    text-shadow: 2px 2px white;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -108,8 +108,10 @@ a:hover {
     text-decoration: underline;
 }
 
-footer {
-    font-size: 1rem;
+footer p {
+    margin: 0 auto;
+    line-height: 1rem;
+    font-size: 1.2rem;
     color: gray;
     text-align: center;
 }
@@ -140,8 +142,4 @@ footer {
     p img {
     	height: 20rem;
 	margin: 0 1rem;	
-}
-
-    footer {
-        font-size: 0.8rem;
 }
